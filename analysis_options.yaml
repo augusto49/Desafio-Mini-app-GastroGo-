@@ -1,0 +1,18 @@
+include: package:very_good_analysis/analysis_options.yaml
+
+analyzer:
+  exclude:
+    - "**/*.g.dart"
+    - "build/**"
+
+linter:
+  rules:
+    sort_constructors_first: true
+    prefer_final_locals: true
+    avoid_print: false
+    unnecessary_lambdas: true
+    sort_pub_dependencies: true
+    curly_braces_in_flow_control_structures: true
+    prefer_int_literals: true
+    unnecessary_underscores: false
+    lines_longer_than_80_chars: ignore

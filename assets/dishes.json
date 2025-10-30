@@ -1,0 +1,233 @@
+[
+  {
+    "id": "d1",
+    "restaurant_id": "r1",
+    "name": "Feijoada",
+    "price": 39.9,
+    "vegan": false,
+    "image_url": "https://picsum.photos/seed/d1/800/400"
+  },
+  {
+    "id": "d2",
+    "restaurant_id": "r1",
+    "name": "Tutu com Torresmo",
+    "price": 28.5,
+    "vegan": false,
+    "image_url": "https://picsum.photos/seed/d2/800/400"
+  },
+  {
+    "id": "d3",
+    "restaurant_id": "r1",
+    "name": "Couve Refogada",
+    "price": 9.9,
+    "vegan": true,
+    "image_url": "https://picsum.photos/seed/d3/800/400"
+  },
+
+  {
+    "id": "d4",
+    "restaurant_id": "r2",
+    "name": "Spaghetti Carbonara",
+    "price": 32.0,
+    "vegan": false,
+    "image_url": "https://picsum.photos/seed/d4/800/400"
+  },
+  {
+    "id": "d5",
+    "restaurant_id": "r2",
+    "name": "Penne Pomodoro",
+    "price": 25.0,
+    "vegan": true,
+    "image_url": "https://picsum.photos/seed/d5/800/400"
+  },
+  {
+    "id": "d6",
+    "restaurant_id": "r2",
+    "name": "Tiramisu",
+    "price": 18.0,
+    "vegan": false,
+    "image_url": "https://picsum.photos/seed/d6/800/400"
+  },
+
+  {
+    "id": "d7",
+    "restaurant_id": "r3",
+    "name": "Salada Power Bowl",
+    "price": 27.5,
+    "vegan": true,
+    "image_url": "https://picsum.photos/seed/d7/800/400"
+  },
+  {
+    "id": "d8",
+    "restaurant_id": "r3",
+    "name": "Wrap de Grão-de-bico",
+    "price": 22.0,
+    "vegan": true,
+    "image_url": "https://picsum.photos/seed/d8/800/400"
+  },
+  {
+    "id": "d9",
+    "restaurant_id": "r3",
+    "name": "Smoothie Verde",
+    "price": 12.0,
+    "vegan": true,
+    "image_url": "https://picsum.photos/seed/d9/800/400"
+  },
+
+  {
+    "id": "d10",
+    "restaurant_id": "r4",
+    "name": "Sushi Combo",
+    "price": 59.9,
+    "vegan": false,
+    "image_url": "https://picsum.photos/seed/d10/800/400"
+  },
+  {
+    "id": "d11",
+    "restaurant_id": "r4",
+    "name": "Ramen Vegetal",
+    "price": 34.5,
+    "vegan": true,
+    "image_url": "https://picsum.photos/seed/d11/800/400"
+  },
+  {
+    "id": "d12",
+    "restaurant_id": "r4",
+    "name": "Tempurá",
+    "price": 29.9,
+    "vegan": false,
+    "image_url": "https://picsum.photos/seed/d12/800/400"
+  },
+
+  {
+    "id": "d13",
+    "restaurant_id": "r5",
+    "name": "Tacos de Carnitas",
+    "price": 21.9,
+    "vegan": false,
+    "image_url": "https://picsum.photos/seed/d13/800/400"
+  },
+  {
+    "id": "d14",
+    "restaurant_id": "r5",
+    "name": "Burrito Vegano",
+    "price": 24.0,
+    "vegan": true,
+    "image_url": "https://picsum.photos/seed/d14/800/400"
+  },
+  {
+    "id": "d15",
+    "restaurant_id": "r5",
+    "name": "Guacamole",
+    "price": 14.0,
+    "vegan": true,
+    "image_url": "https://picsum.photos/seed/d15/800/400"
+  },
+  {
+    "id": "d16",
+    "restaurant_id": "r5",
+    "name": "Nachos Supreme",
+    "price": 19.0,
+    "vegan": false,
+    "image_url": "https://picsum.photos/seed/d16/800/400"
+  },
+
+  {
+    "id": "d17",
+    "restaurant_id": "r6",
+    "name": "Confit de Pato",
+    "price": 78.0,
+    "vegan": false,
+    "image_url": "https://picsum.photos/seed/d17/800/400"
+  },
+  {
+    "id": "d18",
+    "restaurant_id": "r6",
+    "name": "Quiche de Alho-poró",
+    "price": 29.0,
+    "vegan": false,
+    "image_url": "https://picsum.photos/seed/d18/800/400"
+  },
+  {
+    "id": "d19",
+    "restaurant_id": "r6",
+    "name": "Sopa de Legumes",
+    "price": 16.0,
+    "vegan": true,
+    "image_url": "https://picsum.photos/seed/d19/800/400"
+  },
+  {
+    "id": "d20",
+    "restaurant_id": "r6",
+    "name": "Crème Brûlée",
+    "price": 22.0,
+    "vegan": false,
+    "image_url": "https://picsum.photos/seed/d20/800/400"
+  },
+
+  {
+    "id": "d21",
+    "restaurant_id": "r7",
+    "name": "Picanha na Brasa",
+    "price": 59.9,
+    "vegan": false,
+    "image_url": "https://picsum.photos/seed/d21/800/400"
+  },
+  {
+    "id": "d22",
+    "restaurant_id": "r7",
+    "name": "Fraldinha ao Alho",
+    "price": 54.0,
+    "vegan": false,
+    "image_url": "https://picsum.photos/seed/d22/800/400"
+  },
+  {
+    "id": "d23",
+    "restaurant_id": "r7",
+    "name": "Vinagrete de Legumes",
+    "price": 8.5,
+    "vegan": true,
+    "image_url": "https://picsum.photos/seed/d23/800/400"
+  },
+  {
+    "id": "d24",
+    "restaurant_id": "r7",
+    "name": "Queijo Coalho",
+    "price": 12.0,
+    "vegan": false,
+    "image_url": "https://picsum.photos/seed/d24/800/400"
+  },
+
+  {
+    "id": "d25",
+    "restaurant_id": "r8",
+    "name": "Kibe Frito",
+    "price": 18.0,
+    "vegan": false,
+    "image_url": "https://picsum.photos/seed/d25/800/400"
+  },
+  {
+    "id": "d26",
+    "restaurant_id": "r8",
+    "name": "Falafel",
+    "price": 16.5,
+    "vegan": true,
+    "image_url": "https://picsum.photos/seed/d26/800/400"
+  },
+  {
+    "id": "d27",
+    "restaurant_id": "r8",
+    "name": "Tabule",
+    "price": 14.0,
+    "vegan": true,
+    "image_url": "https://picsum.photos/seed/d27/800/400"
+  },
+  {
+    "id": "d28",
+    "restaurant_id": "r8",
+    "name": "Charuto de Uva",
+    "price": 17.0,
+    "vegan": false,
+    "image_url": "https://picsum.photos/seed/d28/800/400"
+  }
+]
