@@ -5,6 +5,11 @@ O projeto foi desenvolvido como desafio técnico, priorizando legibilidade, desa
 
 ---
 
+<img width="396" height="836" alt="image" src="https://github.com/user-attachments/assets/05d994a8-1d41-4612-a9ad-8dba98004040" />
+<img width="402" height="836" alt="image" src="https://github.com/user-attachments/assets/ba7e92ef-f46a-419e-88f3-52c73cb500b0" />
+<img width="404" height="835" alt="image" src="https://github.com/user-attachments/assets/342d95df-4fe2-4ef0-9c84-5c1d74e40694" />
+
+
 ## 🚀 Instruções de Build & Execução
 
 ### 🧰 Pré-requisitos
