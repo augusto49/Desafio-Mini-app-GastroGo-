@@ -65,37 +65,20 @@ O projeto segue as regras da Very Good Analysis, garantindo consistência e boas
 
 ### 🧱 Estrutura de Pastas
 
-lib/
-├── core/
-├── data/
-│   ├── models/
-│   │   ├── dish_model.dart
-│   │   ├── dish_model.g.dart
-│   │   ├── restaurant_model.dart
-│   │   └── restaurant_model.g.dart
-│   ├── repositories/
-│   │   └── food_repository.dart
-│   └── sources/
-│       ├── fake_remote_source.dart
-│       └── local_json_source.dart
-├── domain/
-│   ├── entities/
-│   └── usecases/
-├── presentation/
-│   ├── pages/
-│   │   ├── favorites_page.dart
-│   │   ├── home_page.dart
-│   │   ├── restaurant_detail_page.dart
-│   │   └── restaurants_page.dart
-│   ├── providers/
-│   │   ├── paginated_restaurants_provider.dart
-│   │   ├── providers.dart
-│   │   └── theme_provider.dart
-│   └── widgets/
-│       ├── dish_tile.dart
-│       └── restaurant_card.dart
-└── main.dart
-
+```
+📁 lib/
+ ┣ 📂 core/
+ ┣ 📂 data/
+ ┃ ┣ 📂 models/
+ ┃ ┣ 📂 repositories/
+ ┃ ┗ 📂 sources/
+ ┣ 📂 domain/
+ ┣ 📂 presentation/
+ ┃ ┣ 📂 pages/
+ ┃ ┣ 📂 providers/
+ ┃ ┗ 📂 widgets/
+ ┗ 📄 main.dart
+```
 
 ### ⚙️ Integração Contínua (CI)
 
