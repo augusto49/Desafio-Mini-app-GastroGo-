@@ -1,0 +1,47 @@
+name: Flutter CI
+
+on:
+  push:
+    branches: [main, master, develop]
+  pull_request:
+    branches: [main, master, develop]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1️⃣ Clona o repositório
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # 2️⃣ Configura Flutter (versão estável)
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: "3.24.3"
+          channel: "stable"
+
+      # 3️⃣ Verifica dependências
+      - name: Get dependencies
+        run: flutter pub get
+
+      # 4️⃣ Analisa o código
+      - name: Analyze project
+        run: flutter analyze
+
+      # 5️⃣ Roda os testes
+      - name: Run tests
+        run: flutter test --no-pub --coverage
+
+      # 6️⃣ Gera o build (debug)
+      - name: Build APK (debug)
+        run: flutter build apk --debug
+
+      # 7️⃣ (Opcional) Uploada o artefato gerado
+      - name: Upload APK artifact
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: app-debug-apk
+          path: build/app/outputs/flutter-apk/app-debug.apk
