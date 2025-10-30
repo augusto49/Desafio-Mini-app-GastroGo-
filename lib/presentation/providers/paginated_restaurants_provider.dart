@@ -28,5 +28,5 @@ class PaginatedRestaurantsNotifier
 
 final paginatedRestaurantsProvider =
     AsyncNotifierProvider<PaginatedRestaurantsNotifier, List<RestaurantModel>>(
-      () => PaginatedRestaurantsNotifier(),
+      PaginatedRestaurantsNotifier.new,
     );

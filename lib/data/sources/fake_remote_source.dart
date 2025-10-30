@@ -5,8 +5,9 @@ import 'package:gastrogo/data/models/dish_model.dart';
 import 'package:gastrogo/data/models/restaurant_model.dart';
 import 'package:gastrogo/data/sources/local_json_source.dart';
 
-/// 🔹 Simula um servidor remoto, com delay e falhas limitadas (1 ou 2 por ciclo)
+/// Simula um servidor remoto, com delay e falhas limitadas (1 ou 2 por ciclo)
 class FakeRemoteSource {
+  FakeRemoteSource(this.local);
   final LocalJsonSource local;
   final _random = Random();
 
@@ -14,13 +15,11 @@ class FakeRemoteSource {
   int _restaurantFailures = 0;
   int _dishFailures = 0;
 
-  FakeRemoteSource(this.local);
-
   /// Simula um fetch remoto de restaurantes
   Future<List<RestaurantModel>> fetchRestaurants() async {
     await Future.delayed(const Duration(seconds: 2));
 
-    // 🔸 Até 2 falhas simuladas no total
+    // Até 2 falhas simuladas no total
     if (_restaurantFailures < 2 && _random.nextDouble() < 0.3) {
       _restaurantFailures++;
       throw Exception(
@@ -37,7 +36,7 @@ class FakeRemoteSource {
   Future<List<DishModel>> fetchDishes() async {
     await Future.delayed(const Duration(seconds: 1));
 
-    // 🔸 Até 1 falha simulada no total
+    // Até 1 falha simulada no total
     if (_dishFailures < 1 && _random.nextDouble() < 0.25) {
       _dishFailures++;
       throw Exception('Erro ao buscar pratos (falha simulada $_dishFailures)');

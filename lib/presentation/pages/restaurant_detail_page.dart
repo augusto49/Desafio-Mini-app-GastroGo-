@@ -6,8 +6,8 @@ import 'package:gastrogo/presentation/providers/providers.dart';
 import 'package:gastrogo/presentation/widgets/dish_tile.dart';
 
 class RestaurantDetailPage extends ConsumerWidget {
-  final RestaurantModel restaurant;
   const RestaurantDetailPage({required this.restaurant, super.key});
+  final RestaurantModel restaurant;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -24,9 +24,9 @@ class RestaurantDetailPage extends ConsumerWidget {
             expandedHeight: 250,
             backgroundColor: Colors.white,
             leading: Padding(
-              padding: const EdgeInsets.all(6.0),
+              padding: const EdgeInsets.all(6),
               child: CircleAvatar(
-                backgroundColor: Colors.black.withOpacity(0.4),
+                backgroundColor: Colors.black.withValues(alpha: 0.4),
                 child: IconButton(
                   icon: const Icon(Icons.arrow_back, color: Colors.white),
                   onPressed: () => Navigator.pop(context),
@@ -40,7 +40,7 @@ class RestaurantDetailPage extends ConsumerWidget {
                   data: (set) {
                     final isFav = set.contains(restaurant.id);
                     return CircleAvatar(
-                      backgroundColor: Colors.black.withOpacity(0.4),
+                      backgroundColor: Colors.black.withValues(alpha: 0.4),
                       child: IconButton(
                         icon: Icon(
                           isFav ? Icons.favorite : Icons.favorite_border,
@@ -60,7 +60,7 @@ class RestaurantDetailPage extends ConsumerWidget {
                       ),
                   error:
                       (_, __) => CircleAvatar(
-                        backgroundColor: Colors.black.withOpacity(0.5),
+                        backgroundColor: Colors.black.withValues(alpha: 0.4),
                         child: IconButton(
                           icon: const Icon(
                             Icons.favorite_border,
@@ -157,7 +157,7 @@ class RestaurantDetailPage extends ConsumerWidget {
 
                 // --- Título "Cardápio" ---
                 const Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 20.0),
+                  padding: EdgeInsets.symmetric(horizontal: 20),
                   child: Text(
                     'Cardápio',
                     style: TextStyle(
@@ -170,7 +170,7 @@ class RestaurantDetailPage extends ConsumerWidget {
 
                 // --- Lista de pratos ---
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 12.0),
+                  padding: const EdgeInsets.symmetric(horizontal: 12),
                   child: dishesAsync.when(
                     loading:
                         () => const Center(child: CircularProgressIndicator()),
@@ -186,7 +186,7 @@ class RestaurantDetailPage extends ConsumerWidget {
                       if (list.isEmpty) {
                         return const Center(
                           child: Padding(
-                            padding: EdgeInsets.all(24.0),
+                            padding: EdgeInsets.all(24),
                             child: Text('Nenhum prato encontrado.'),
                           ),
                         );

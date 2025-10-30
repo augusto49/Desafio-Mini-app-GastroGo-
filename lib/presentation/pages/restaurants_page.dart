@@ -24,8 +24,7 @@ class _RestaurantsPageState extends ConsumerState<RestaurantsPage> {
     super.dispose();
   }
 
-  bool get _isInfiniteMode =>
-      category == 'All' && query.isEmpty; // modo scroll infinito visual
+  bool get _isInfiniteMode => category == 'All' && query.isEmpty;
 
   @override
   Widget build(BuildContext context) {
@@ -72,13 +71,10 @@ class _RestaurantsPageState extends ConsumerState<RestaurantsPage> {
               final isInfinite = _isInfiniteMode;
 
               return RefreshIndicator(
-                onRefresh: () => notifier.refresh(),
+                onRefresh: notifier.refresh,
                 child: ListView.builder(
                   controller: _scrollController,
-                  itemCount:
-                      isInfinite
-                          ? 1000000 // loop visual
-                          : filtered.length, // lista real quando filtrado
+                  itemCount: isInfinite ? 1000000 : filtered.length,
                   itemBuilder: (context, index) {
                     final r =
                         isInfinite

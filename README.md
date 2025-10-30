@@ -22,6 +22,10 @@ flutter pub get
 flutter run
 ```
 
+### ▶️ Verificar ao testar as funcionalidades
+
+Quando for acessar alguma funcionalidade do aplicativo, recarregue ou entre na mesma pagina pelo menos 2 vezes pois esta com ERROR SIMULADO para simular queda da API.
+
 ### 🧩 Decisões de Arquitetura
 
 O projeto segue uma arquitetura em camadas, com separação clara de responsabilidades:

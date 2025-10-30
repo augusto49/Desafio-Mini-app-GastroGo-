@@ -5,9 +5,9 @@ import 'package:gastrogo/data/models/dish_model.dart';
 import 'package:gastrogo/presentation/providers/providers.dart';
 
 class DishTile extends ConsumerWidget {
+  const DishTile({required this.dish, this.onTap, super.key});
   final DishModel dish;
   final VoidCallback? onTap;
-  const DishTile({required this.dish, this.onTap, super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

@@ -9,20 +9,20 @@ import 'package:gastrogo/data/sources/fake_remote_source.dart';
 import 'package:gastrogo/data/sources/local_json_source.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-/// 🔹 Fonte local
+/// Fonte local
 final localJsonSourceProvider = Provider((ref) => LocalJsonSource());
 
-/// 🔹 Simulação remota com delay e falhas
+/// Simulação remota com delay e falhas
 final fakeRemoteSourceProvider = Provider(
   (ref) => FakeRemoteSource(ref.read(localJsonSourceProvider)),
 );
 
-/// 🔹 Repositório
+/// Repositório
 final foodRepoProvider = Provider(
   (ref) => FoodRepository(source: ref.read(fakeRemoteSourceProvider)),
 );
 
-/// 🔹 Restaurantes assíncronos
+/// Restaurantes assíncronos
 final restaurantsProvider = FutureProvider.autoDispose<List<RestaurantModel>>((
   ref,
 ) async {
@@ -30,13 +30,13 @@ final restaurantsProvider = FutureProvider.autoDispose<List<RestaurantModel>>((
   return repo.getRestaurants();
 });
 
-/// 🔹 Pratos assíncronos
+/// Pratos assíncronos
 final dishesProvider = FutureProvider.autoDispose<List<DishModel>>((ref) async {
   final repo = ref.read(foodRepoProvider);
   return repo.getDishes();
 });
 
-/// 🔹 Favoritos com SharedPreferences
+/// Favoritos com SharedPreferences
 class FavoritesNotifier extends AsyncNotifier<Set<String>> {
   @override
   FutureOr<Set<String>> build() async {
@@ -63,5 +63,5 @@ class FavoritesNotifier extends AsyncNotifier<Set<String>> {
 }
 
 final favoritesProvider = AsyncNotifierProvider<FavoritesNotifier, Set<String>>(
-  () => FavoritesNotifier(),
+  FavoritesNotifier.new,
 );

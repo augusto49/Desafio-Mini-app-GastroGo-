@@ -5,16 +5,15 @@ import 'package:gastrogo/data/models/restaurant_model.dart';
 import 'package:gastrogo/presentation/providers/providers.dart';
 
 class RestaurantCard extends ConsumerWidget {
-  final RestaurantModel restaurant;
-  final VoidCallback? onTap;
-  final String? heroTagSuffix;
-
   const RestaurantCard({
     required this.restaurant,
     this.onTap,
     this.heroTagSuffix,
     super.key,
   });
+  final RestaurantModel restaurant;
+  final VoidCallback? onTap;
+  final String? heroTagSuffix;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -62,7 +61,7 @@ class RestaurantCard extends ConsumerWidget {
                     data: (set) {
                       final isFav = set.contains(restaurant.id);
                       return CircleAvatar(
-                        backgroundColor: Colors.white.withOpacity(0.9),
+                        backgroundColor: Colors.white.withValues(alpha: 0.9),
                         child: IconButton(
                           icon: Icon(
                             isFav ? Icons.favorite : Icons.favorite_border,
@@ -83,7 +82,7 @@ class RestaurantCard extends ConsumerWidget {
                         ),
                     error:
                         (_, __) => CircleAvatar(
-                          backgroundColor: Colors.white.withOpacity(0.9),
+                          backgroundColor: Colors.white.withValues(alpha: 0.9),
                           child: const Icon(Icons.favorite_border, size: 18),
                         ),
                   ),

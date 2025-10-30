@@ -83,7 +83,6 @@ class FavoritesPage extends ConsumerWidget {
                     return const Text('Nenhum prato favoritado.');
                   }
 
-                  // Usamos restaurantsAsync aqui para encontrar o restaurante ao tocar
                   return restaurantsAsync.when(
                     loading:
                         () => const Center(child: CircularProgressIndicator()),
@@ -91,8 +90,6 @@ class FavoritesPage extends ConsumerWidget {
                         (_, __) => Column(
                           children:
                               favDishes.map((d) {
-                                // Se não temos a lista de restaurants por alguma razão,
-                                // mostramos os pratos mas sem navegação para restaurant.
                                 return DishTile(dish: d);
                               }).toList(),
                         ),

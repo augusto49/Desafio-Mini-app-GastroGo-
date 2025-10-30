@@ -24,7 +24,6 @@ class _HomePageState extends ConsumerState<HomePage> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // 🔹 Header
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
               child: Row(
@@ -52,7 +51,7 @@ class _HomePageState extends ConsumerState<HomePage> {
               ),
             ),
 
-            // 🔹 Tabs (Início / Favoritos)
+            // Tabs (Início / Favoritos)
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
               child: Row(
@@ -63,8 +62,6 @@ class _HomePageState extends ConsumerState<HomePage> {
                 ],
               ),
             ),
-
-            // 🔹 Página atual
             Expanded(child: pages[_index]),
           ],
         ),

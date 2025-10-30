@@ -3,8 +3,8 @@ import 'package:gastrogo/data/models/restaurant_model.dart';
 import 'package:gastrogo/data/sources/fake_remote_source.dart';
 
 class FoodRepository {
-  final FakeRemoteSource source;
   FoodRepository({required this.source});
+  final FakeRemoteSource source;
 
   Future<List<RestaurantModel>> getRestaurants() => source.fetchRestaurants();
   Future<List<DishModel>> getDishes() => source.fetchDishes();
@@ -14,7 +14,7 @@ class FoodRepository {
     return dishes.where((d) => d.restaurant_id == restaurantId).toList();
   }
 
-  /// 🔁 Scroll infinito (repete dados quando acaba)
+  /// Scroll infinito
   Future<List<RestaurantModel>> getRestaurantsPaginated({
     required int page,
     int limit = 8,
